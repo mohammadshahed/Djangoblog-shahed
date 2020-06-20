@@ -26,7 +26,7 @@ SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 # Application definition
@@ -130,7 +130,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
