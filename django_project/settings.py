@@ -80,14 +80,18 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_blog',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1p7tcuqv0p2p7',
+        'USER': 'wxgzoemsrnmjsn',
+        'PASSWORD': '4ab27db3cb9514e36b91c86c71bfa3c67501f2d2e5baa60e6720f2089e22bcdd',
+        'HOST': 'ec2-34-233-226-84.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
+
+import dj_database_url
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 
 # Password validation
