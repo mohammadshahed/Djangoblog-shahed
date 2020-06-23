@@ -28,7 +28,7 @@ SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
 DEBUG = False
 # DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
 
-ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 # Application definition
@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'd1p7tcuqv0p2p7',
         'USER' : 'wxgzoemsrnmjsn',
         'PASSWORD' : '4ab27db3cb9514e36b91c86c71bfa3c67501f2d2e5baa60e6720f2089e22bcdd',
-        'HOST' : 'djangoblog-shahed.herokuapp.com',
+        'HOST' : 'ec2-34-233-226-84.compute-1.amazonaws.com',
         'PORT' : '5432'
     }
 }
