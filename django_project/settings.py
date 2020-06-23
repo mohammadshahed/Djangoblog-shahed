@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'd1p7tcuqv0p2p7',
         'USER' : 'wxgzoemsrnmjsn',
         'PASSWORD' : '4ab27db3cb9514e36b91c86c71bfa3c67501f2d2e5baa60e6720f2089e22bcdd',
-        'HOST' : 'ec2-34-233-226-84.compute-1.amazonaws.com',
+        'HOST' : 'djangoblog-shahed.herokuapp.com',
         'PORT' : '5432'
     }
 }
