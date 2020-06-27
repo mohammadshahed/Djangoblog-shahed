@@ -79,43 +79,19 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd1p7tcuqv0p2p7',
-        'USER' : 'wxgzoemsrnmjsn',
-        'PASSWORD' : '4ab27db3cb9514e36b91c86c71bfa3c67501f2d2e5baa60e6720f2089e22bcdd',
-        'HOST' : 'ec2-34-233-226-84.compute-1.amazonaws.com',
-        'PORT' : '5432'
-    }
-}
-'''
+
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_blog',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
-    }
-}
-'''
 
-'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-'''
+
 
 
 
@@ -185,12 +161,3 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 
 django_heroku.settings(locals())
-
-
-'''
-try:
-    from .local_settings import *
-
-except ImportError:
-    pass
-    '''
