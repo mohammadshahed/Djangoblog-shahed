@@ -192,9 +192,3 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
 
 django_heroku.settings(locals())
-
-try:
-    from .local_settings import *
-
-except ImportError:
-    pass
