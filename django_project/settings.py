@@ -26,7 +26,7 @@ SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
 
 ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
