@@ -26,7 +26,7 @@ SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
 
 ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
@@ -98,11 +98,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+'''
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
+'''
 '''
 DATABASES = {
     'default': {
