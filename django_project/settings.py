@@ -26,10 +26,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
+DEBUG = False
+#DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
 
-ALLOWED_HOSTS = ['https://djangoblog-shahed.herokuapp.com']
+ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 # Application definition
@@ -102,7 +102,7 @@ DATABASES = {
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE'] = 500
+#DATABASES['default']['CONN_MAX_AGE'] = 500
 '''
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
@@ -186,6 +186,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
-
 
 django_heroku.settings(locals())
