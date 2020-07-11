@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = ''
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7')
+#SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
+SECRET_KEY = os.environ.get('SECRET_KEY', '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
@@ -100,6 +100,9 @@ DATABASES = {
 }
 
 import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 '''
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
