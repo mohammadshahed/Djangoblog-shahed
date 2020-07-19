@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-#import django_heroku
+import django_heroku
 import os
 
 
@@ -100,7 +100,7 @@ DATABASES = {
 }
 '''
 
-'''
+
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
@@ -108,7 +108,7 @@ DATABASES['default'].update(db_from_env)
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-'''
+
 
 
 '''
@@ -191,4 +191,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
