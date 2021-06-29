@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-import django_heroku
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,7 +8,7 @@ SECRET_KEY = 'SECRET_KEY'
 
 DEBUG = True
 
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
@@ -17,7 +16,7 @@ ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 INSTALLED_APPS = [
     'blog',
     'crispy_forms',
-    'users.apps.UsersConfig',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,5 +129,3 @@ LOGIN_URL = 'login'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
-
-django_heroku.settings(locals())
