@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import django_heroku
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,8 +9,8 @@ SECRET_KEY = 'SECRET_KEY'
 
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 
@@ -103,7 +104,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -130,3 +131,4 @@ LOGIN_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+django_heroku.settings(locals())
