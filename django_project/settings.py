@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+from decouple import config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -11,15 +12,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
+SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 # Application definition
@@ -114,7 +115,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
