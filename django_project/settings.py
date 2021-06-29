@@ -9,8 +9,8 @@ SECRET_KEY = 'SECRET_KEY'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 
