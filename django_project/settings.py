@@ -8,8 +8,8 @@ SECRET_KEY = '==o(i0@j^1h%zuy#^nly%vf3d3_^n_*sweph_ia*ur%np35li7'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoblog-shahed.herokuapp.com']
 
 
 
